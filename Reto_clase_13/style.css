@@ -1,0 +1,62 @@
+:root {
+    --skin: #F8D49E;
+    --background: #B06CC3;
+    --yellow: #F5FE12;
+    --beard: #7B6343;
+    --shirt: #48CBA2;
+    --black: #00243a;
+    --white: #fff;
+  }
+
+/* 
+  poner márgenes y padding a 0 para que no nos molesten dibujando así como también definimos un borde rojo que nos ayudará a ver el tamaño y forma de los < div > */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+/*     border: 5px solid red; */
+}
+/* 
+usaremos CSS flexbox para alinear nuestro elementos sin importar el tamaño de pantalla */
+
+body {
+    margin: 0;
+  }
+
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+  /* Paso 1, dibujar la cabeza */
+.head {
+    width: 400px;
+    height: 400px;
+    background-color: var(--skin);
+    position: relative;
+    border-radius: 50%;
+}
+.eye-left {
+    width: 125px;
+    height: 125px;
+    background: var(--white);
+    position: absolute;
+    top: 125px;
+    border-radius: 70% 30% 63% 37% / 70% 37% 63% 30%  ;
+    left: 75px;
+    
+  }
+
+.eye-right {
+    width: 125px;
+    height: 125px;
+    background: var(--white);
+    position: absolute;
+    top: 125px;
+    border-radius: 32% 68% 37% 63% / 31% 63% 37% 69%  ;
+    left: 195px;
+  }
+
